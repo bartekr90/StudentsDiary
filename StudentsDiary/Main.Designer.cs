@@ -57,6 +57,7 @@ namespace StudentsDiary
             this.btnEdit.TabIndex = 1;
             this.btnEdit.Text = "Edycja";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDelete
             // 
@@ -77,6 +78,7 @@ namespace StudentsDiary
             this.btnRefresh.TabIndex = 3;
             this.btnRefresh.Text = "Odświerz";
             this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // dgvDiary
             // 
@@ -87,21 +89,21 @@ namespace StudentsDiary
             this.dgvDiary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDiary.Location = new System.Drawing.Point(12, 41);
             this.dgvDiary.Name = "dgvDiary";
-            this.dgvDiary.Size = new System.Drawing.Size(776, 397);
+            this.dgvDiary.Size = new System.Drawing.Size(1106, 498);
             this.dgvDiary.TabIndex = 4;
             // 
-            // Form1
+            // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1130, 551);
             this.Controls.Add(this.dgvDiary);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnAdd);
-            this.Name = "Form1";
+            this.Name = "Main";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiary)).EndInit();

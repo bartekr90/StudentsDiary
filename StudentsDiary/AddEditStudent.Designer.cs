@@ -31,9 +31,9 @@ namespace StudentsDiary
         {
             this.tbId = new System.Windows.Forms.TextBox();
             this.lbId = new System.Windows.Forms.Label();
-            this.tbName = new System.Windows.Forms.TextBox();
+            this.tbFirstName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.tbSurname = new System.Windows.Forms.TextBox();
+            this.tbLastname = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tbMath = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -68,12 +68,12 @@ namespace StudentsDiary
             this.lbId.TabIndex = 1;
             this.lbId.Text = "ID";
             // 
-            // tbName
+            // tbFirstName
             // 
-            this.tbName.Location = new System.Drawing.Point(95, 38);
-            this.tbName.Name = "tbName";
-            this.tbName.Size = new System.Drawing.Size(294, 20);
-            this.tbName.TabIndex = 0;
+            this.tbFirstName.Location = new System.Drawing.Point(95, 38);
+            this.tbFirstName.Name = "tbFirstName";
+            this.tbFirstName.Size = new System.Drawing.Size(294, 20);
+            this.tbFirstName.TabIndex = 0;
             // 
             // label1
             // 
@@ -84,12 +84,12 @@ namespace StudentsDiary
             this.label1.TabIndex = 1;
             this.label1.Text = "Imię";
             // 
-            // tbSurname
+            // tbLastname
             // 
-            this.tbSurname.Location = new System.Drawing.Point(95, 64);
-            this.tbSurname.Name = "tbSurname";
-            this.tbSurname.Size = new System.Drawing.Size(294, 20);
-            this.tbSurname.TabIndex = 0;
+            this.tbLastname.Location = new System.Drawing.Point(95, 64);
+            this.tbLastname.Name = "tbLastname";
+            this.tbLastname.Size = new System.Drawing.Size(294, 20);
+            this.tbLastname.TabIndex = 0;
             // 
             // label2
             // 
@@ -239,8 +239,8 @@ namespace StudentsDiary
             this.Controls.Add(this.tbPhysics);
             this.Controls.Add(this.tbTechno);
             this.Controls.Add(this.tbMath);
-            this.Controls.Add(this.tbSurname);
-            this.Controls.Add(this.tbName);
+            this.Controls.Add(this.tbLastname);
+            this.Controls.Add(this.tbFirstName);
             this.Controls.Add(this.tbId);
             this.Name = "AddEditStudent";
             this.Text = "AddEditStudent";
@@ -253,9 +253,9 @@ namespace StudentsDiary
 
         private System.Windows.Forms.TextBox tbId;
         private System.Windows.Forms.Label lbId;
-        private System.Windows.Forms.TextBox tbName;
+        private System.Windows.Forms.TextBox tbFirstName;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tbSurname;
+        private System.Windows.Forms.TextBox tbLastname;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbMath;
         private System.Windows.Forms.Label label3;
