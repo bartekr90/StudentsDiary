@@ -14,7 +14,7 @@ namespace StudentsDiary
 {
     public partial class Main : Form
     {
-        private string _filePath = Path.Combine(Environment.CurrentDirectory,"students.txt");
+        private string _filePath = Path.Combine(Environment.CurrentDirectory, "students.txt");
 
         public Main()
         {
@@ -29,8 +29,8 @@ namespace StudentsDiary
 
             using (var streanWriter = new StreamWriter(_filePath))
             {
-            serializer.Serialize(streanWriter,students);
-            streanWriter.Close();            
+                serializer.Serialize(streanWriter, students);
+                streanWriter.Close();
             }
         }
 
@@ -43,7 +43,7 @@ namespace StudentsDiary
 
             using (var streamReader = new StreamReader(_filePath))
             {
-                var students = (List<Student>)serializer.Deserialize(streamReader);                
+                var students = (List<Student>)serializer.Deserialize(streamReader);
                 streamReader.Close();
                 return students;
             }
@@ -62,7 +62,6 @@ namespace StudentsDiary
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-
             var students = DeserializeFromFile();
             dgvDiary.DataSource = students;
         }
@@ -74,6 +73,25 @@ namespace StudentsDiary
                 MessageBox.Show("Proszę zaznacz ucznia, którego chcesz edytować");
                 return;
             }
+            var addEditStudent = new AddEditStudent(Convert.ToInt32(dgvDiary.SelectedRows[0].Cells[0].Value));
+            addEditStudent.ShowDialog();
+
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (dgvDiary.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Proszę zaznacz ucznia, którego chcesz edytować");
+                return;
+            }
+            var selectedStudent = dgvDiary.SelectedRows[0];
+
+            var confirmDelete =
+            MessageBox.Show($"Czy napewno chcesz usunąć ucznia" +
+                $" {selectedStudent.Cells[1].Value.ToString() + " " + selectedStudent.Cells[2].Value.ToString().Trim()}",
+                "Usuwanie ucznia", MessageBoxButtons.OKCancel);
 
 
         }
