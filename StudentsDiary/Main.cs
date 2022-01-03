@@ -14,14 +14,14 @@ namespace StudentsDiary
             InitializeComponent();
             RefreshDiary();
             SetColumsHeader();
-
         }
+
         void RefreshDiary()
         {
             var students = _fileHelper.DeserializeFromFile();
             dgvDiary.DataSource = students;
-
         }
+
         void SetColumsHeader()
         {
             dgvDiary.Columns[0].HeaderText = "Numer";
@@ -33,13 +33,18 @@ namespace StudentsDiary
             dgvDiary.Columns[6].HeaderText = "Fizyka";
             dgvDiary.Columns[7].HeaderText = "Język polski";
             dgvDiary.Columns[8].HeaderText = "Język obcy";
-
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
             var addEditStudent = new AddEditStudent();
+            addEditStudent.FormClosing += AddEditStudent_FormClosing;
             addEditStudent.ShowDialog();
+        }
+
+        private void AddEditStudent_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            RefreshDiary();
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -55,9 +60,8 @@ namespace StudentsDiary
                 return;
             }
             var addEditStudent = new AddEditStudent(Convert.ToInt32(dgvDiary.SelectedRows[0].Cells[0].Value));
+            addEditStudent.FormClosing += AddEditStudent_FormClosing;
             addEditStudent.ShowDialog();
-
-
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
