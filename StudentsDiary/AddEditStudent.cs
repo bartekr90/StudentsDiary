@@ -21,6 +21,7 @@ namespace StudentsDiary
             GetStudentData();
             tbFirstName.Select();
         }
+
         private void GetStudentData()
         {
             if (_studentId != 0)
@@ -34,19 +35,20 @@ namespace StudentsDiary
 
                 FillTextBoxes();
             }
-
         }
+
         private void FillTextBoxes()
         {
             tbId.Text = _student.Id.ToString();
             tbFirstName.Text = _student.FirstName;
             tbLastname.Text = _student.LastName;
-            rtbComment.Text = _student.Comments;
-            tbForeignLang.Text = _student.ForeignLang;
-            tbPolishLang.Text = _student.PolishLang;
-            tbPhysics.Text = _student.Physics;
             tbMath.Text = _student.Math;
             tbTechno.Text = _student.Technology;
+            tbPhysics.Text = _student.Physics;            
+            tbPolishLang.Text = _student.PolishLang;
+            tbForeignLang.Text = _student.ForeignLang;
+            cbExtraActivities.Checked = _student.ExtraActivities;
+            rtbComment.Text = _student.Comments;
         }
 
         private void btnComfirm_Click(object sender, EventArgs e)
@@ -62,6 +64,7 @@ namespace StudentsDiary
             _fileHelper.SerializeToFile(students);
             Close();
         }
+
         private void AddNewUserToList(List<Student> students)
         {
             var student = new Student
@@ -69,12 +72,13 @@ namespace StudentsDiary
                 Id = _studentId,
                 FirstName = tbFirstName.Text,
                 LastName = tbLastname.Text,
-                Comments = rtbComment.Text,
                 ForeignLang = tbForeignLang.Text,
                 PolishLang = tbPolishLang.Text,
                 Physics = tbPhysics.Text,
                 Math = tbMath.Text,
-                Technology = tbTechno.Text
+                Technology = tbTechno.Text,
+                Comments = rtbComment.Text,
+                ExtraActivities = cbExtraActivities.Checked
             };
             students.Add(student);
         }
@@ -91,8 +95,6 @@ namespace StudentsDiary
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Close();
-
-        }
-
+        }        
     }
 }
