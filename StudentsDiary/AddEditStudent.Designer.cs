@@ -50,6 +50,8 @@ namespace StudentsDiary
             this.btnComfirm = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.cbExtraActivities = new System.Windows.Forms.CheckBox();
+            this.cbIdGrup = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // tbId
@@ -71,7 +73,7 @@ namespace StudentsDiary
             // 
             // tbFirstName
             // 
-            this.tbFirstName.Location = new System.Drawing.Point(95, 38);
+            this.tbFirstName.Location = new System.Drawing.Point(95, 65);
             this.tbFirstName.Name = "tbFirstName";
             this.tbFirstName.Size = new System.Drawing.Size(294, 20);
             this.tbFirstName.TabIndex = 0;
@@ -79,7 +81,7 @@ namespace StudentsDiary
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(52, 45);
+            this.label1.Location = new System.Drawing.Point(52, 72);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(26, 13);
             this.label1.TabIndex = 1;
@@ -87,7 +89,7 @@ namespace StudentsDiary
             // 
             // tbLastname
             // 
-            this.tbLastname.Location = new System.Drawing.Point(95, 64);
+            this.tbLastname.Location = new System.Drawing.Point(95, 91);
             this.tbLastname.Name = "tbLastname";
             this.tbLastname.Size = new System.Drawing.Size(294, 20);
             this.tbLastname.TabIndex = 0;
@@ -95,7 +97,7 @@ namespace StudentsDiary
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 71);
+            this.label2.Location = new System.Drawing.Point(25, 98);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 1;
@@ -103,7 +105,7 @@ namespace StudentsDiary
             // 
             // tbMath
             // 
-            this.tbMath.Location = new System.Drawing.Point(95, 90);
+            this.tbMath.Location = new System.Drawing.Point(95, 117);
             this.tbMath.Name = "tbMath";
             this.tbMath.Size = new System.Drawing.Size(294, 20);
             this.tbMath.TabIndex = 0;
@@ -111,7 +113,7 @@ namespace StudentsDiary
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 97);
+            this.label3.Location = new System.Drawing.Point(13, 124);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 13);
             this.label3.TabIndex = 1;
@@ -119,7 +121,7 @@ namespace StudentsDiary
             // 
             // tbTechno
             // 
-            this.tbTechno.Location = new System.Drawing.Point(95, 116);
+            this.tbTechno.Location = new System.Drawing.Point(95, 143);
             this.tbTechno.Name = "tbTechno";
             this.tbTechno.Size = new System.Drawing.Size(294, 20);
             this.tbTechno.TabIndex = 0;
@@ -127,7 +129,7 @@ namespace StudentsDiary
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 123);
+            this.label4.Location = new System.Drawing.Point(12, 150);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(66, 13);
             this.label4.TabIndex = 1;
@@ -135,7 +137,7 @@ namespace StudentsDiary
             // 
             // tbPhysics
             // 
-            this.tbPhysics.Location = new System.Drawing.Point(95, 142);
+            this.tbPhysics.Location = new System.Drawing.Point(95, 169);
             this.tbPhysics.Name = "tbPhysics";
             this.tbPhysics.Size = new System.Drawing.Size(294, 20);
             this.tbPhysics.TabIndex = 0;
@@ -143,7 +145,7 @@ namespace StudentsDiary
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(41, 149);
+            this.label5.Location = new System.Drawing.Point(41, 176);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(37, 13);
             this.label5.TabIndex = 1;
@@ -151,7 +153,7 @@ namespace StudentsDiary
             // 
             // tbPolishLang
             // 
-            this.tbPolishLang.Location = new System.Drawing.Point(95, 168);
+            this.tbPolishLang.Location = new System.Drawing.Point(95, 195);
             this.tbPolishLang.Name = "tbPolishLang";
             this.tbPolishLang.Size = new System.Drawing.Size(294, 20);
             this.tbPolishLang.TabIndex = 0;
@@ -159,7 +161,7 @@ namespace StudentsDiary
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(33, 175);
+            this.label6.Location = new System.Drawing.Point(33, 202);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(45, 13);
             this.label6.TabIndex = 1;
@@ -167,7 +169,7 @@ namespace StudentsDiary
             // 
             // tbForeignLang
             // 
-            this.tbForeignLang.Location = new System.Drawing.Point(95, 194);
+            this.tbForeignLang.Location = new System.Drawing.Point(95, 221);
             this.tbForeignLang.Name = "tbForeignLang";
             this.tbForeignLang.Size = new System.Drawing.Size(294, 20);
             this.tbForeignLang.TabIndex = 0;
@@ -175,7 +177,7 @@ namespace StudentsDiary
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(37, 201);
+            this.label7.Location = new System.Drawing.Point(37, 228);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(41, 13);
             this.label7.TabIndex = 1;
@@ -183,7 +185,7 @@ namespace StudentsDiary
             // 
             // rtbComment
             // 
-            this.rtbComment.Location = new System.Drawing.Point(95, 249);
+            this.rtbComment.Location = new System.Drawing.Point(95, 270);
             this.rtbComment.Name = "rtbComment";
             this.rtbComment.Size = new System.Drawing.Size(294, 129);
             this.rtbComment.TabIndex = 2;
@@ -192,7 +194,7 @@ namespace StudentsDiary
             // Label8
             // 
             this.Label8.AutoSize = true;
-            this.Label8.Location = new System.Drawing.Point(41, 249);
+            this.Label8.Location = new System.Drawing.Point(41, 270);
             this.Label8.Name = "Label8";
             this.Label8.Size = new System.Drawing.Size(37, 13);
             this.Label8.TabIndex = 1;
@@ -200,7 +202,7 @@ namespace StudentsDiary
             // 
             // btnComfirm
             // 
-            this.btnComfirm.Location = new System.Drawing.Point(314, 384);
+            this.btnComfirm.Location = new System.Drawing.Point(314, 405);
             this.btnComfirm.Name = "btnComfirm";
             this.btnComfirm.Size = new System.Drawing.Size(75, 23);
             this.btnComfirm.TabIndex = 3;
@@ -210,7 +212,7 @@ namespace StudentsDiary
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(233, 384);
+            this.btnCancel.Location = new System.Drawing.Point(233, 405);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 4;
@@ -221,19 +223,48 @@ namespace StudentsDiary
             // cbExtraActivities
             // 
             this.cbExtraActivities.AutoSize = true;
-            this.cbExtraActivities.Location = new System.Drawing.Point(95, 220);
+            this.cbExtraActivities.Location = new System.Drawing.Point(95, 247);
             this.cbExtraActivities.Name = "cbExtraActivities";
             this.cbExtraActivities.Size = new System.Drawing.Size(213, 17);
             this.cbExtraActivities.TabIndex = 6;
             this.cbExtraActivities.Text = "Czy uczeń posiada dodatkowe zajęcia?";
             this.cbExtraActivities.UseVisualStyleBackColor = true;
-            
+            // 
+            // cbIdGrup
+            // 
+            this.cbIdGrup.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
+            this.cbIdGrup.AllowDrop = true;            
+            this.cbIdGrup.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.cbIdGrup.Items.AddRange(new object[] {
+            "Pierwsza",
+            "Druga",
+            "Trzecia",
+            "Czwarta",
+            "Piąta",
+            "Szósta"});
+            this.cbIdGrup.Location = new System.Drawing.Point(95, 38);
+            this.cbIdGrup.Name = "cbIdGrup";
+            this.cbIdGrup.Size = new System.Drawing.Size(294, 21);
+            this.cbIdGrup.TabIndex = 7;
+            this.cbIdGrup.SelectedIndex = 0;
+            this.cbIdGrup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(45, 46);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(33, 13);
+            this.label9.TabIndex = 8;
+            this.label9.Text = "Klasa";
             // 
             // AddEditStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(423, 447);
+            this.ClientSize = new System.Drawing.Size(423, 585);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.cbIdGrup);
             this.Controls.Add(this.cbExtraActivities);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnComfirm);
@@ -255,8 +286,6 @@ namespace StudentsDiary
             this.Controls.Add(this.tbLastname);
             this.Controls.Add(this.tbFirstName);
             this.Controls.Add(this.tbId);
-            this.MaximumSize = new System.Drawing.Size(439, 486);
-            this.MinimumSize = new System.Drawing.Size(439, 486);
             this.Name = "AddEditStudent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dodawanie ucznia";
@@ -288,5 +317,7 @@ namespace StudentsDiary
         private System.Windows.Forms.Button btnComfirm;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.CheckBox cbExtraActivities;
+        private System.Windows.Forms.ComboBox cbIdGrup;
+        private System.Windows.Forms.Label label9;
     }
 }

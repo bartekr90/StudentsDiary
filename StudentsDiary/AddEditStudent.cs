@@ -49,6 +49,7 @@ namespace StudentsDiary
             tbForeignLang.Text = _student.ForeignLang;
             cbExtraActivities.Checked = _student.ExtraActivities;
             rtbComment.Text = _student.Comments;
+            cbIdGrup.Text = _student.IdGrup;
         }
 
         private void btnComfirm_Click(object sender, EventArgs e)
@@ -78,7 +79,9 @@ namespace StudentsDiary
                 Math = tbMath.Text,
                 Technology = tbTechno.Text,
                 Comments = rtbComment.Text,
-                ExtraActivities = cbExtraActivities.Checked
+                ExtraActivities = cbExtraActivities.Checked,
+                IdGrup = cbIdGrup.Text
+                
             };
             students.Add(student);
         }

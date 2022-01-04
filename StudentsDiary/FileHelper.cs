@@ -11,6 +11,7 @@ namespace StudentsDiary
         {
             _filePath = filePath;
         }
+
         public T DeserializeFromFile()
         {
             if (!File.Exists(_filePath))

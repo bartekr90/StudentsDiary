@@ -25,15 +25,16 @@ namespace StudentsDiary
         void SetColumsHeader()
         {
             dgvDiary.Columns[0].HeaderText = "Nr ID";
-            dgvDiary.Columns[1].HeaderText = "Imię";
-            dgvDiary.Columns[2].HeaderText = "Nazwisko";
-            dgvDiary.Columns[3].HeaderText = "Matematyka";
-            dgvDiary.Columns[4].HeaderText = "Technologia";
-            dgvDiary.Columns[5].HeaderText = "Fizyka";
-            dgvDiary.Columns[6].HeaderText = "Język polski";
-            dgvDiary.Columns[7].HeaderText = "Język obcy";
-            dgvDiary.Columns[8].HeaderText = "Zajęcia dodatkowe";
-            dgvDiary.Columns[9].HeaderText = "Uwagi";
+            dgvDiary.Columns[1].HeaderText = "Klasa";
+            dgvDiary.Columns[2].HeaderText = "Imię";
+            dgvDiary.Columns[3].HeaderText = "Nazwisko";
+            dgvDiary.Columns[4].HeaderText = "Matematyka";
+            dgvDiary.Columns[5].HeaderText = "Technologia";
+            dgvDiary.Columns[6].HeaderText = "Fizyka";
+            dgvDiary.Columns[7].HeaderText = "Język polski";
+            dgvDiary.Columns[8].HeaderText = "Język obcy";
+            dgvDiary.Columns[9].HeaderText = "Zajęcia dodatkowe";
+            dgvDiary.Columns[10].HeaderText = "Uwagi";
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
