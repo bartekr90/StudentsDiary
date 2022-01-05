@@ -9,9 +9,23 @@ namespace StudentsDiary
         private FileHelper<List<Student>> _fileHelper =
             new FileHelper<List<Student>>(Program.FilePath);
 
+        static public readonly List<string> _listOfGrups = new List<string>
+        {
+            "Wszystkie",
+            "Pierwsza",
+            "Druga",
+            "Trzecia",
+            "Czwarta",
+            "Piąta",
+            "Szósta",
+            "Siódma",
+            "Ósma",
+        };
+
         public Main()
         {
             InitializeComponent();
+            cbListOfGrups.DataSource = _listOfGrups;
             RefreshDiary();
             SetColumsHeader();
         }
@@ -19,6 +33,8 @@ namespace StudentsDiary
         void RefreshDiary()
         {
             var students = _fileHelper.DeserializeFromFile();
+            if (cbListOfGrups.Text != "Wszystkie")
+                students.RemoveAll(x => x.IdGrup != cbListOfGrups.Text);
             dgvDiary.DataSource = students;
         }
 
@@ -56,14 +72,21 @@ namespace StudentsDiary
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (dgvDiary.SelectedRows.Count == 0)
+            try
             {
-                MessageBox.Show("Proszę zaznacz ucznia, którego chcesz edytować");
-                return;
+                if (dgvDiary.SelectedRows.Count == 0)
+                {
+                    MessageBox.Show("Proszę zaznacz ucznia, którego chcesz edytować");
+                    return;
+                }
+                var addEditStudent = new AddEditStudent(Convert.ToInt32(dgvDiary.SelectedRows[0].Cells[0].Value));
+                addEditStudent.FormClosing += AddEditStudent_FormClosing;
+                addEditStudent.ShowDialog();
             }
-            var addEditStudent = new AddEditStudent(Convert.ToInt32(dgvDiary.SelectedRows[0].Cells[0].Value));
-            addEditStudent.FormClosing += AddEditStudent_FormClosing;
-            addEditStudent.ShowDialog();
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Błąd: {ex.Message} {ex.Source} ");
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -77,7 +100,7 @@ namespace StudentsDiary
 
             var confirmDelete =
             MessageBox.Show($"Czy napewno chcesz usunąć ucznia" +
-                $" {selectedStudent.Cells[1].Value.ToString() + " " + selectedStudent.Cells[2].Value.ToString().Trim()}",
+                $" {selectedStudent.Cells[2].Value.ToString() + " " + selectedStudent.Cells[3].Value.ToString().Trim()}",
                 "Usuwanie ucznia",
                 MessageBoxButtons.OKCancel);
 
@@ -93,6 +116,11 @@ namespace StudentsDiary
             var students = _fileHelper.DeserializeFromFile();
             students.RemoveAll(x => x.Id == id);
             _fileHelper.SerializeToFile(students);
+        }
+
+        private void cbListOfGrups_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            RefreshDiary();
         }
     }
 }

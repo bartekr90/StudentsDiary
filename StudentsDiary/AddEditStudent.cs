@@ -14,9 +14,12 @@ namespace StudentsDiary
         private FileHelper<List<Student>> _fileHelper =
             new FileHelper<List<Student>>(Program.FilePath);
 
+        private List<string> _listOfGrup = ModifyList(Main._listOfGrups);
+
         public AddEditStudent(int id = 0)
         {
             InitializeComponent();
+            cbIdGrup.DataSource = _listOfGrup;
             _studentId = id;
             GetStudentData();
             tbFirstName.Select();
@@ -36,6 +39,11 @@ namespace StudentsDiary
                 FillTextBoxes();
             }
         }
+        private static List<string> ModifyList(List<string> list)
+        {
+            list.RemoveAll(x => x == "Wszystkie");
+            return list;
+        }
 
         private void FillTextBoxes()
         {
@@ -49,7 +57,7 @@ namespace StudentsDiary
             tbForeignLang.Text = _student.ForeignLang;
             cbExtraActivities.Checked = _student.ExtraActivities;
             rtbComment.Text = _student.Comments;
-            cbIdGrup.Text = _student.IdGrup;
+            cbIdGrup.Text = _student.IdGrup;            
         }
 
         private void btnComfirm_Click(object sender, EventArgs e)

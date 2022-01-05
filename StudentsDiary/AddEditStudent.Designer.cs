@@ -50,8 +50,8 @@ namespace StudentsDiary
             this.btnComfirm = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.cbExtraActivities = new System.Windows.Forms.CheckBox();
-            this.cbIdGrup = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.cbIdGrup = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // tbId
@@ -230,25 +230,6 @@ namespace StudentsDiary
             this.cbExtraActivities.Text = "Czy uczeń posiada dodatkowe zajęcia?";
             this.cbExtraActivities.UseVisualStyleBackColor = true;
             // 
-            // cbIdGrup
-            // 
-            this.cbIdGrup.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
-            this.cbIdGrup.AllowDrop = true;            
-            this.cbIdGrup.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.cbIdGrup.Items.AddRange(new object[] {
-            "Pierwsza",
-            "Druga",
-            "Trzecia",
-            "Czwarta",
-            "Piąta",
-            "Szósta"});
-            this.cbIdGrup.Location = new System.Drawing.Point(95, 38);
-            this.cbIdGrup.Name = "cbIdGrup";
-            this.cbIdGrup.Size = new System.Drawing.Size(294, 21);
-            this.cbIdGrup.TabIndex = 7;
-            this.cbIdGrup.SelectedIndex = 0;
-            this.cbIdGrup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -258,13 +239,22 @@ namespace StudentsDiary
             this.label9.TabIndex = 8;
             this.label9.Text = "Klasa";
             // 
+            // cbIdGrup
+            // 
+            this.cbIdGrup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbIdGrup.FormattingEnabled = true;
+            this.cbIdGrup.Location = new System.Drawing.Point(95, 37);
+            this.cbIdGrup.Name = "cbIdGrup";
+            this.cbIdGrup.Size = new System.Drawing.Size(294, 21);
+            this.cbIdGrup.TabIndex = 9;
+            // 
             // AddEditStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(423, 585);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.cbIdGrup);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.cbExtraActivities);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnComfirm);
@@ -317,7 +307,7 @@ namespace StudentsDiary
         private System.Windows.Forms.Button btnComfirm;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.CheckBox cbExtraActivities;
-        private System.Windows.Forms.ComboBox cbIdGrup;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox cbIdGrup;
     }
 }
