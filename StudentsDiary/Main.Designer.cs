@@ -132,6 +132,7 @@ namespace StudentsDiary
             this.Controls.Add(this.btnAdd);
             this.Name = "Main";
             this.Text = "Dziennik Ucznia";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Main_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiary)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

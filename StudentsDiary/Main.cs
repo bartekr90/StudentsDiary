@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StudentsDiary.Properties;
+using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
@@ -8,6 +9,11 @@ namespace StudentsDiary
     {
         private FileHelper<List<Student>> _fileHelper =
             new FileHelper<List<Student>>(Program.FilePath);
+        public bool IsMaximize
+        {
+            get { return Settings.Default.IsMaximize; }
+            set { Settings.Default.IsMaximize = value; }
+        }
 
         static public readonly List<string> _listOfGrups = new List<string>
         {
@@ -28,6 +34,8 @@ namespace StudentsDiary
             cbListOfGrups.DataSource = _listOfGrups;
             RefreshDiary();
             SetColumsHeader();
+            if (IsMaximize)
+                WindowState = FormWindowState.Maximized;
         }
 
         void RefreshDiary()
@@ -121,6 +129,16 @@ namespace StudentsDiary
         private void cbListOfGrups_SelectedIndexChanged(object sender, EventArgs e)
         {
             RefreshDiary();
+        }
+
+        private void Main_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (WindowState == FormWindowState.Maximized)
+                IsMaximize = true;
+            else
+                IsMaximize = false;
+            Settings.Default.Save();
+            //c:\Users\Ja\AppData\Local\StudentsDiary\ - katalog z zapisanymi ustawieniami
         }
     }
 }
