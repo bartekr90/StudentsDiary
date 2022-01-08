@@ -185,7 +185,7 @@ namespace StudentsDiary
             // 
             // rtbComment
             // 
-            this.rtbComment.Location = new System.Drawing.Point(95, 270);
+            this.rtbComment.Location = new System.Drawing.Point(95, 290);
             this.rtbComment.Name = "rtbComment";
             this.rtbComment.Size = new System.Drawing.Size(294, 129);
             this.rtbComment.TabIndex = 2;
@@ -194,7 +194,7 @@ namespace StudentsDiary
             // Label8
             // 
             this.Label8.AutoSize = true;
-            this.Label8.Location = new System.Drawing.Point(41, 270);
+            this.Label8.Location = new System.Drawing.Point(41, 290);
             this.Label8.Name = "Label8";
             this.Label8.Size = new System.Drawing.Size(37, 13);
             this.Label8.TabIndex = 1;
@@ -202,7 +202,7 @@ namespace StudentsDiary
             // 
             // btnComfirm
             // 
-            this.btnComfirm.Location = new System.Drawing.Point(314, 405);
+            this.btnComfirm.Location = new System.Drawing.Point(314, 425);
             this.btnComfirm.Name = "btnComfirm";
             this.btnComfirm.Size = new System.Drawing.Size(75, 23);
             this.btnComfirm.TabIndex = 3;
@@ -212,7 +212,7 @@ namespace StudentsDiary
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(233, 405);
+            this.btnCancel.Location = new System.Drawing.Point(233, 425);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 4;
@@ -223,7 +223,7 @@ namespace StudentsDiary
             // cbExtraActivities
             // 
             this.cbExtraActivities.AutoSize = true;
-            this.cbExtraActivities.Location = new System.Drawing.Point(95, 247);
+            this.cbExtraActivities.Location = new System.Drawing.Point(95, 257);
             this.cbExtraActivities.Name = "cbExtraActivities";
             this.cbExtraActivities.Size = new System.Drawing.Size(213, 17);
             this.cbExtraActivities.TabIndex = 6;
@@ -252,7 +252,7 @@ namespace StudentsDiary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(423, 585);
+            this.ClientSize = new System.Drawing.Size(423, 488);
             this.Controls.Add(this.cbIdGrup);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.cbExtraActivities);
@@ -276,6 +276,8 @@ namespace StudentsDiary
             this.Controls.Add(this.tbLastname);
             this.Controls.Add(this.tbFirstName);
             this.Controls.Add(this.tbId);
+            this.MaximumSize = new System.Drawing.Size(439, 527);
+            this.MinimumSize = new System.Drawing.Size(439, 527);
             this.Name = "AddEditStudent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dodawanie ucznia";
